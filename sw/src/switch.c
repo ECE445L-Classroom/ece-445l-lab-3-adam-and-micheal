@@ -80,3 +80,4 @@ uint8_t regPinSelect(uint8_t pin, uint32_t input){
 	return input >> pin;
 }
 
+

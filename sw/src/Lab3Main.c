@@ -101,6 +101,24 @@ int main(void){
 }
 
 
+void Clock_Delay(uint32_t ulCount){
+  while(ulCount){
+    ulCount--;
+  }
+}
+
+// ------------Clock_Delay1ms------------
+// Simple delay function which delays about n milliseconds.
+// Inputs: n, number of msec to wait
+// Outputs: none
+void Clock_Delay1ms(uint32_t n){
+  while(n){
+    Clock_Delay(23746);  // 1 msec, tuned at 80 MHz, originally part of LCD module
+    n--;
+  }
+}
+
+
 
 
 
