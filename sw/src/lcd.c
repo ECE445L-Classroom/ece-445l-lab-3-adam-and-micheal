@@ -11,10 +11,67 @@ void drawBackground(uint16_t color){
 
 
 /*
+This is the function for drawing the back of the analog clock. This should always be drawn the same way.
+So hopefully no issues with this part.
+*/
+void drawAClockBack(){
+
+}
+
+/*
+This function draws the second hand for the analog clock. This takes an input of the second to be drawn
+and draws it accordingly.
+*/
+void drawAClockSecond(uint8_t second){
+	
+	
+}
+
+/*
+This function draws the minute hand for the analog clock. This takes an input of the minute to be
+drawn and draws it accordingly
+*/
+void drawAClockMinute(uint8_t minute){
+	
+}
+
+
+/*
+This function draws the hour hand for the analog clock. This takes an input of the hour to be
+drawn and draws it accordingly
+*/
+
+void drawAClockHour(uint8_t hour){
+	
+	
+}
+
+/*
 This is the root of drawing the analog clock, it takes the time to display as an input and 
 draws it.
 */
 void drawAClock(time_t currTime){
+	drawAClockBack();
+	drawAClockSecond(currTime.second);
+	drawAClockMinute(currTime.minute);
+	drawAClockHour(currTime.hour);
+}
+
+/*
+This functions draws the background rectangle for the digital clock that will be in the 
+top left corner of the screen
+*/
+void drawDClockBack(uint16_t color){
+	
+	
+}
+
+
+/*
+This function draws the text for the time to be displayed on the digital clock.
+It takes the current time that is to be drawn as an input and draws its text version
+*/
+void drawDClockTime(time_t currTime){
 	
 	
 }
@@ -24,9 +81,9 @@ void drawAClock(time_t currTime){
 This is the root of drawing the digital clock, it takes the time to display as an input
 and draws it
 */
-void drawDClock(time_t currTime){
-	
-	
+void drawDClock(time_t currTime, uint16_t color){
+	drawDClockBack(color);
+	drawDClockTime(currTime);
 }
 
 
@@ -99,7 +156,7 @@ then calls all of the relevent functions to draw the screen.
 void drawEntireScreen(screenInputs_t inputs){
 	drawBackground(inputs.backgroundColor);
 	drawAClock(inputs.ATime);
-	drawDClock(inputs.DTime);
+	drawDClock(inputs.DTime, inputs.DClockColor);
 	drawSetTime(inputs.setTimeColor);
 	drawSetAlarm(inputs.setAlarmColor);
 	drawMessage(inputs.message, 30, inputs.showMessage);

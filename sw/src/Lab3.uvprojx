@@ -455,6 +455,11 @@
               <FileType>5</FileType>
               <FilePath>.\speaker.h</FilePath>
             </File>
+            <File>
+              <FileName>pixelImages.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\pixelImages.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
