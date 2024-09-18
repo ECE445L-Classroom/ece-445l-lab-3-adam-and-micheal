@@ -9,6 +9,15 @@ void SwitchD0_Init(void){
 }
 
 void toggleD0(void){
-	
-	
+	*GPIO_PORTD_DATA_PIN0 ^= 0x1;
 }
+
+void startAlarm(){
+	Timer1A_Init(toggleD0, 40000, 6);
+}
+
+void stopAlarm(){
+ Timer1A_Stop();
+}
+	
+
