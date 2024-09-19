@@ -8,6 +8,9 @@ volatile time_t currTime = {0, 0 ,0};
 
 void timerInterrupt(void);
 
+void heartbeatInterrupt(void);
+
+
 /*
 A timer that calls its interrupt function once every second
 */
@@ -33,4 +36,16 @@ void timerInterrupt(){
 			}		
 		}	
 	}	
+}
+
+void enableHeartbeat(){
+	Timer0A_Init(heartbeatInterrupt, 80000000, 6);
+}
+
+void stopHeartbeat(){
+	Timer2A_Stop();
+}
+
+void heartbeatInterrupt(){
+	(*GPIO_B1) ^= (0x01 << 1);
 }

@@ -5,7 +5,7 @@
 	(uuid "69b823fd-c065-40ff-9bb9-c5835555f3eb")
 	(paper "A4")
 	(title_block
-		(title "ECE 445L Baseline Project")
+		(title "ECE 445L Lab 3")
 		(date "2024-08-07")
 		(rev "v1.0.1")
 		(company "The University of Texas at Austin")
@@ -3476,7 +3476,7 @@
 		)
 		(uuid "2ce7e080-867f-407f-a778-325138e7f70f")
 	)
-	(text "ECE 445L Baseline Project"
+	(text "ECE 445L Lab 3\n"
 		(exclude_from_sim no)
 		(at 179.07 22.86 0)
 		(effects
@@ -3512,6 +3512,17 @@
 			(justify left bottom)
 		)
 		(uuid "8a4b063c-1f09-4a89-835b-a5b4b2dd4d63")
+	)
+	(label "+3V3"
+		(at 95.25 128.27 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5027b51f-d8d7-4eaf-b405-7e620c1b1dd9")
 	)
 	(global_label "PC5"
 		(shape input)
@@ -5379,72 +5390,6 @@
 			(project "baseline_project"
 				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb"
 					(reference "#PWR0105")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 95.25 128.27 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "52343db8-a3b4-4e93-851e-03939d825917")
-		(property "Reference" "#PWR0107"
-			(at 95.25 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 95.25 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.25 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.25 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1614d149-581e-43c6-90ec-8078c4304fbd")
-		)
-		(instances
-			(project "baseline_project"
-				(path "/69b823fd-c065-40ff-9bb9-c5835555f3eb"
-					(reference "#PWR0107")
 					(unit 1)
 				)
 			)

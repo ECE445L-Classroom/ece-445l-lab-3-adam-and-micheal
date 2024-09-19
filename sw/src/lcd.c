@@ -1,6 +1,7 @@
 
 
 #include "lcd.h"
+#include "pixelImages.h"
 
 /*
 Draws the background of the overll display
@@ -16,6 +17,13 @@ So hopefully no issues with this part.
 */
 void drawAClockBack(){
 
+	for (int i = 40; i < 100; ++i){
+		uint16_t width, xLocation;
+		const uint16_t* pixels = obtainCirclePixels(&width, &xLocation, i-40);
+		for (int j = 0; j < width; ++j){
+			ST7735_DrawPixel(xLocation, i, pixels[j]);
+		}	
+	}	
 }
 
 /*
